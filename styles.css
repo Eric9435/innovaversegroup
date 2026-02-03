@@ -757,3 +757,31 @@ input:focus, textarea:focus{
   color:#fff;
   transform: translateY(-2px);
 }
+
+/* ===== Premium Contact (Minimal Executive Style) ===== */
+
+.contactPremium{
+  text-align:center;
+  padding: 70px 20px;
+}
+
+.contactPremium h2{
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: var(--navy);
+}
+
+.contactAddress{
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+.contactPhones{
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 2;
+  color: #111;
+}
