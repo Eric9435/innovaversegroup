@@ -431,4 +431,125 @@ input:focus, textarea:focus{
   .nav{ display:none; }
   .menuBtn{ display:flex; flex-direction:column; justify-content:center; }
 }
+.companiesGrid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 14px;
+}
+
+.companyCard{
+  text-decoration:none;
+  color: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  background: #fff;
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.companyCard:hover{
+  transform: translateY(-2px);
+  border-color: rgba(30,27,75,0.22);
+  box-shadow: 0 18px 50px rgba(15,23,42,0.08);
+}
+.companyCard__top{
+  display:flex;
+  gap: 12px;
+  align-items:center;
+}
+.companyCard__logo{
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 6px;
+}
+.companyCard h3{ margin:0 0 4px; color: var(--navy); font-size: 16px; }
+.companyCard__cta{
+  display:inline-block;
+  margin-top: 12px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.chipList{
+  margin: 12px 0 0;
+  padding: 0;
+  list-style:none;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chipList li{
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(11,11,13,0.78);
+  background: rgba(30,27,75,0.06);
+  border: 1px solid rgba(30,27,75,0.10);
+  padding: 8px 10px;
+  border-radius: 999px;
+}
+
+.slider{
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow: var(--shadow);
+}
+.sliderTrack{
+  display:flex;
+  width: 400%;
+  animation: slideX 18s infinite;
+}
+.sliderTrack img{
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+@keyframes slideX{
+  0%{ transform: translateX(0%); }
+  23%{ transform: translateX(0%); }
+  25%{ transform: translateX(-25%); }
+  48%{ transform: translateX(-25%); }
+  50%{ transform: translateX(-50%); }
+  73%{ transform: translateX(-50%); }
+  75%{ transform: translateX(-75%); }
+  98%{ transform: translateX(-75%); }
+  100%{ transform: translateX(0%); }
+}
+
+@media (max-width: 920px){
+  .companiesGrid{ grid-template-columns: 1fr; }
+  .sliderTrack img{ height: 240px; }
+}
+.socialRow{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 8px 0 16px;
+}
+
+.qrBlock{
+  margin-top: 10px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+.qrPlaceholder{
+  height: 160px;
+  border: 1px dashed rgba(30,27,75,0.30);
+  border-radius: 16px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap: 6px;
+  color: rgba(11,11,13,0.78);
+  background: rgba(30,27,75,0.03);
+}
+.qrPlaceholder span{ font-weight: 800; color: var(--navy); }
+.qrPlaceholder small{ color: var(--muted); font-weight: 600; }
+
 
