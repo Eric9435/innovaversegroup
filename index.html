@@ -3,20 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Innovaverse Group | Holding Company</title>
-  <meta name="description" content="Innovaverse Group is a technology holding company integrating automation, engineering, consulting, education, and luxury brands." />
+  <title>Innovaverse Group | Premium Holding Company</title>
+  <meta name="description" content="Innovaverse Group is a premium technology holding company integrating automation, engineering, consulting, education, and luxury brands." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Top bar -->
+  <!-- HEADER -->
   <header class="header">
     <div class="container header__inner">
       <a class="brand" href="#top" aria-label="Innovaverse Group Home">
-        <img class="brand__logo" src="assets/logo.png" alt="Innovaverse logo" />
+        <img class="brand__logo" src="assets/logo.png" alt="Innovaverse Group logo" />
         <span class="brand__name">Innovaverse Group</span>
       </a>
 
@@ -24,7 +26,8 @@
         <a href="#about">About</a>
         <a href="#companies">Companies</a>
         <a href="#capabilities">Capabilities</a>
-        <a href="#insights">Insights</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
         <a class="btn btn--primary" href="#contact">Contact</a>
       </nav>
 
@@ -33,28 +36,31 @@
       </button>
     </div>
 
-    <!-- Mobile nav -->
+    <!-- Mobile Nav -->
     <div class="mobileNav" id="mobileNav" hidden>
       <div class="container mobileNav__inner">
         <a href="#about">About</a>
         <a href="#companies">Companies</a>
         <a href="#capabilities">Capabilities</a>
-        <a href="#insights">Insights</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
   <main id="top">
+
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero__grid">
+
         <div class="hero__copy">
-          <p class="eyebrow">TECHNOLOGY HOLDING COMPANY</p>
+          <p class="eyebrow">PREMIUM HOLDING COMPANY</p>
           <h1>Engineering the future of intelligence, infrastructure, and industry.</h1>
           <p class="lead">
-            Innovaverse Group integrates automation, engineering, consulting, education, and luxury brands—
-            built with a premium, systems-driven mindset.
+            Innovaverse Group integrates automation, engineering, consulting, education, and luxury brands —
+            built with a systems-driven, premium execution mindset.
           </p>
 
           <div class="hero__cta">
@@ -101,16 +107,36 @@
 
           <div class="hero__bgGlow" aria-hidden="true"></div>
         </div>
+
       </div>
     </section>
 
-    <!-- About -->
+    <!-- SHOWCASE SLIDER (Auto Slide) -->
+    <section class="section" id="showcase">
+      <div class="container">
+        <div class="section__head">
+          <h2>Showcase</h2>
+          <p>Highlights across innovation, engineering, education, and premium brands.</p>
+        </div>
+
+        <div class="slider" aria-label="Auto slideshow">
+          <div class="sliderTrack" id="sliderTrack">
+            <img src="assets/slides/slide1.jpg" alt="Showcase slide 1">
+            <img src="assets/slides/slide2.jpg" alt="Showcase slide 2">
+            <img src="assets/slides/slide3.jpg" alt="Showcase slide 3">
+            <img src="assets/slides/slide4.jpg" alt="Showcase slide 4">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
     <section class="section" id="about">
       <div class="container">
         <div class="section__head">
           <h2>About Innovaverse Group</h2>
           <p>
-            We operate as a structured holding group—building focused subsidiaries that solve real problems
+            We operate as a structured holding group — building focused subsidiaries that solve real problems
             across industry, technology, learning, and premium retail.
           </p>
         </div>
@@ -126,60 +152,125 @@
           </article>
           <article class="card">
             <h3>Principles</h3>
-            <p>Precision, reliability, elegant execution, and continuous improvement—always premium.</p>
+            <p>Precision, reliability, elegant execution, and continuous improvement — always premium.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Companies -->
+    <!-- COMPANIES (Logo + Services + Separate Pages) -->
     <section class="section section--alt" id="companies">
       <div class="container">
         <div class="section__head">
           <h2>Our Companies</h2>
-          <p>Each division is specialized, brand-aligned, and built to scale.</p>
+          <p>Specialized subsidiaries — structured to scale.</p>
         </div>
 
-        <div class="companies">
-          <a class="company" href="#contact">
-            <h3>Tech Think-Tank</h3>
-            <p>Research • Innovation • Knowledge Hub</p>
+        <div class="companiesGrid">
+
+          <a class="companyCard" href="companies/think-tank.html">
+            <div class="companyCard__top">
+              <img src="assets/companies/thinktank.png" alt="Tech Think-Tank logo" class="companyCard__logo">
+              <div>
+                <h3>Tech Think-Tank</h3>
+                <p class="muted">Research • Innovation • Knowledge Hub</p>
+              </div>
+            </div>
+            <ul class="chipList">
+              <li>Research Notes</li><li>Knowledge Posts</li><li>Workshops</li><li>Innovation Reports</li>
+            </ul>
+            <span class="companyCard__cta">View page →</span>
           </a>
 
-          <a class="company" href="#contact">
-            <h3>Tech Span Consultants</h3>
-            <p>Engineering & Strategy Consulting</p>
+          <a class="companyCard" href="companies/tech-span.html">
+            <div class="companyCard__top">
+              <img src="assets/companies/techspan.png" alt="Tech Span Consultants logo" class="companyCard__logo">
+              <div>
+                <h3>Tech Span Consultants</h3>
+                <p class="muted">Engineering & Strategy Consulting</p>
+              </div>
+            </div>
+            <ul class="chipList">
+              <li>Technical Consulting</li><li>Project Advisory</li><li>Business Strategy</li><li>Documentation</li>
+            </ul>
+            <span class="companyCard__cta">View page →</span>
           </a>
 
-          <a class="company" href="#contact">
-            <h3>InnovateX (Automation Labs)</h3>
-            <p>PLC • SCADA • BMS • Robotics • AI</p>
+          <a class="companyCard" href="companies/innovatex.html">
+            <div class="companyCard__top">
+              <img src="assets/companies/innovatex.png" alt="InnovateX logo" class="companyCard__logo">
+              <div>
+                <h3>InnovateX (Automation Labs)</h3>
+                <p class="muted">PLC • SCADA • BMS • Robotics • AI</p>
+              </div>
+            </div>
+            <ul class="chipList">
+              <li>PLC Programming</li><li>SCADA</li><li>BMS Integration</li><li>Automation R&D</li>
+            </ul>
+            <span class="companyCard__cta">View page →</span>
           </a>
 
-          <a class="company" href="#contact">
-            <h3>Mazurkas Engineering & Construction</h3>
-            <p>ACMV • MEP • EPC • Heavy Machinery</p>
+          <a class="companyCard" href="companies/mazurkas.html">
+            <div class="companyCard__top">
+              <img src="assets/companies/mazurkas.png" alt="Mazurkas logo" class="companyCard__logo">
+              <div>
+                <h3>Mazurkas Engineering & Construction</h3>
+                <p class="muted">ACMV • MEP • EPC • Heavy Machinery</p>
+              </div>
+            </div>
+            <ul class="chipList">
+              <li>ACMV / MEP</li><li>EPC Support</li><li>Site Execution</li><li>Heavy Machinery</li>
+            </ul>
+            <span class="companyCard__cta">View page →</span>
           </a>
 
-          <a class="company" href="#contact">
-            <h3>Skills & Education</h3>
-            <p>Engineering Training • IELTS/English • Music Division</p>
+          <a class="companyCard" href="companies/skills-education.html">
+            <div class="companyCard__top">
+              <img src="assets/companies/skills.png" alt="Skills & Education logo" class="companyCard__logo">
+              <div>
+                <h3>Innovaverse Skills & Education</h3>
+                <p class="muted">Engineering • IELTS/English • Music</p>
+              </div>
+            </div>
+            <ul class="chipList">
+              <li>Engineering Training</li><li>IELTS Coaching</li><li>Music Education</li><li>Workshops</li>
+            </ul>
+            <span class="companyCard__cta">View page →</span>
           </a>
 
-          <a class="company" href="#contact">
-            <h3>Shwe Htake Tin (Gold)</h3>
-            <p>Gold • Craft • Heritage</p>
+          <a class="companyCard" href="companies/shwe-htake-tin.html">
+            <div class="companyCard__top">
+              <img src="assets/companies/shwehtaketin.png" alt="Shwe Htake Tin logo" class="companyCard__logo">
+              <div>
+                <h3>Shwe Htake Tin (Gold)</h3>
+                <p class="muted">Gold • Craft • Heritage</p>
+              </div>
+            </div>
+            <ul class="chipList">
+              <li>Gold Products</li><li>Custom Orders</li><li>After-sales</li><li>Knowledge Sharing</li>
+            </ul>
+            <span class="companyCard__cta">View page →</span>
           </a>
 
-          <a class="company" href="#contact">
-            <h3>King Aurum Jewel</h3>
-            <p>Luxury Jewelry • Premium Identity</p>
+          <a class="companyCard" href="companies/king-aurum.html">
+            <div class="companyCard__top">
+              <img src="assets/companies/kingaurum.png" alt="King Aurum Jewel logo" class="companyCard__logo">
+              <div>
+                <h3>King Aurum Jewel</h3>
+                <p class="muted">Luxury Jewelry • Premium Identity</p>
+              </div>
+            </div>
+            <ul class="chipList">
+              <li>Luxury Pieces</li><li>Premium Packaging</li><li>Brand Story</li><li>Private Orders</li>
+            </ul>
+            <span class="companyCard__cta">View page →</span>
           </a>
+
         </div>
       </div>
     </section>
 
-    <!-- Capabilities -->
+    <!-- CAPABILITIES -->
     <section class="section" id="capabilities">
       <div class="container">
         <div class="section__head">
@@ -211,78 +302,119 @@
       </div>
     </section>
 
-    <!-- Insights -->
-    <section class="section section--alt" id="insights">
+    <!-- OUR PROJECTS -->
+    <section class="section section--alt" id="projects">
       <div class="container">
         <div class="section__head">
-          <h2>Insights</h2>
-          <p>Short, high-quality articles from the Tech Think-Tank. (We can add a blog next.)</p>
+          <h2>Our Projects</h2>
+          <p>Selected works across automation, engineering, education, and premium retail.</p>
         </div>
 
         <div class="grid3">
           <article class="card">
-            <h3>Smart Buildings: BMS as a Growth Engine</h3>
-            <p>Why controls, data, and operations strategy create measurable ROI.</p>
+            <h3>Automation & Control</h3>
+            <p>PLC/SCADA/BMS projects — monitoring, integration, testing, documentation.</p>
           </article>
           <article class="card">
-            <h3>From PLC to AI</h3>
-            <p>A practical roadmap for industrial teams moving toward intelligent automation.</p>
+            <h3>Engineering & Construction</h3>
+            <p>ACMV/MEP/EPC support — coordination, supervision, execution, quality.</p>
           </article>
           <article class="card">
-            <h3>Premium Execution</h3>
-            <p>How structure, documentation, and standards create high-trust businesses.</p>
+            <h3>Education & Training</h3>
+            <p>Engineering training, IELTS programs, music division operations & workshops.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section class="section" id="contact">
+    <!-- OUR EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section__head">
+          <h2>Our Experience</h2>
+          <p>Built on real delivery, consistent improvement, and premium execution standards.</p>
+        </div>
+
+        <div class="grid2">
+          <article class="card">
+            <h3>Systems-Driven Delivery</h3>
+            <p>Processes, checklists, standards, and documentation — engineered for reliability.</p>
+          </article>
+          <article class="card">
+            <h3>Multi-Division Synergy</h3>
+            <p>Automation + Engineering + Education + Luxury — one group, aligned strategy.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--alt" id="contact">
       <div class="container">
         <div class="section__head">
           <h2>Contact</h2>
-          <p>Send a message and we’ll route it to the relevant division.</p>
+          <p>Use the Google Form for inquiries — we will route your message to the relevant division.</p>
         </div>
 
         <div class="contact">
-          <form class="form" action="https://formspree.io/f/yourFormID" method="POST">
-            <div class="formRow">
-              <label>
-                Full Name
-                <input name="name" type="text" placeholder="Your name" required />
-              </label>
-              <label>
-                Email
-                <input name="email" type="email" placeholder="you@email.com" required />
-              </label>
+
+          <!-- LEFT: Google Form Button (No backend needed) -->
+          <div class="form">
+            <h3 style="margin-top:0;color:var(--navy);">Inquiry Form</h3>
+            <p class="muted" style="margin-top:0;">
+              GitHub Pages is static. Google Form is the cleanest, reliable contact method.
+            </p>
+
+            <div style="text-align:center; padding:18px 0 10px;">
+              <a class="btn btn--primary" href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank">
+                Open Contact Form
+              </a>
             </div>
 
-            <label>
-              Message
-              <textarea name="message" rows="6" placeholder="Tell us what you need..." required></textarea>
-            </label>
+            <p class="fineprint">
+              Replace <b>YOUR_GOOGLE_FORM_LINK</b> with your real Google Form link.
+            </p>
+          </div>
 
-            <div class="formActions">
-              <button class="btn btn--primary" type="submit">Send Message</button>
-              <p class="fineprint">
-                Tip: replace Formspree link with your own (free) form endpoint.
-              </p>
-            </div>
-          </form>
-
+          <!-- RIGHT: Address / Phones / Social / WhatsApp / QR Placeholder -->
           <div class="contactCard">
             <h3>Innovaverse Group</h3>
-            <p class="muted">Premium holding company website hosted on GitHub Pages.</p>
+            <p class="muted">No.26, Kwin Kyaung 1st Street, Ahlone, Yangon</p>
+
             <div class="contactItems">
-              <div><span class="k">Email</span><span class="v">your@email.com</span></div>
-              <div><span class="k">Phone</span><span class="v">+95 …</span></div>
-              <div><span class="k">Location</span><span class="v">Myanmar</span></div>
+              <div><span class="k">Phone</span><span class="v">+959 425 096 424</span></div>
+              <div><span class="k"></span><span class="v">+959 772 806 376</span></div>
+              <div><span class="k"></span><span class="v">+959 428 833 288</span></div>
+              <div><span class="k"></span><span class="v">+959 428 833 242</span></div>
+              <div><span class="k"></span><span class="v">+959 768 949 038</span></div>
+              <div><span class="k"></span><span class="v">+959 456 708 891</span></div>
+
+              <div><span class="k">Email</span><span class="v">innovaversegroup@gmail.com</span></div>
             </div>
+
+            <div class="socialRow">
+              <a class="btn btn--ghost" href="https://facebook.com/YOURPAGE" target="_blank">Facebook</a>
+              <a class="btn btn--ghost" href="https://linkedin.com/company/YOURPAGE" target="_blank">LinkedIn</a>
+              <a class="btn btn--ghost" href="https://instagram.com/YOURPAGE" target="_blank">Instagram</a>
+              <a class="btn btn--primary" href="https://wa.me/959425096424" target="_blank">WhatsApp</a>
+            </div>
+
+            <div class="qrBlock">
+              <div class="qrPlaceholder">
+                <span>QR Placeholder</span>
+                <small>Company Profile Download</small>
+              </div>
+              <p class="fineprint">
+                Later: replace this box with your QR image (e.g. <b>assets/qr-company-profile.png</b>)
+              </p>
+            </div>
+
             <div class="contactBtns">
               <a class="btn btn--ghost" href="#companies">Our Companies</a>
               <a class="btn btn--ghost" href="#top">Back to Top</a>
             </div>
           </div>
+
         </div>
 
         <footer class="footer">
@@ -290,6 +422,7 @@
         </footer>
       </div>
     </section>
+
   </main>
 
   <script src="script.js"></script>
