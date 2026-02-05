@@ -1773,3 +1773,11 @@ input:focus, textarea:focus{
   stroke: #0f172a;
   stroke-width: 1;
 }
+
+#worldMap{
+  width: 100%;
+  aspect-ratio: 1100 / 560;  /* keeps height visible */
+  height: auto;
+  display: block;
+}
+
