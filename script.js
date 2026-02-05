@@ -22,12 +22,16 @@ if (menuBtn && mobileNav) {
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+
 <script>
-(async function(){
+(async function () {
   const svg = d3.select("#worldMap");
+  if (svg.empty()) return;
+
   const width = 1100, height = 560;
 
-  const activeCountries = new Set([
+  // Countries to highlight (names from country-names.tsv)
+  const active = new Set([
     "United States of America",
     "United Kingdom",
     "Ireland",
@@ -38,32 +42,27 @@ if (menuBtn && mobileNav) {
     "China"
   ]);
 
-  const world = await d3.json(
-    "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
-  );
+  // Load topojson + names table (IMPORTANT)
+  const world = await d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json");
+  const names = await d3.tsv("https://cdn.jsdelivr.net/npm/world-atlas@2/country-names.tsv");
 
-  const countries = topojson.feature(
-    world,
-    world.objects.countries
-  ).features;
+  const nameById = new Map(names.map(d => [d.id, d.name]));
+
+  const countries = topojson.feature(world, world.objects.countries).features;
+  countries.forEach(d => d.properties = { name: nameById.get(String(d.id)) });
 
   const projection = d3.geoNaturalEarth1()
-    .fitSize([width, height], {
-      type: "FeatureCollection",
-      features: countries
-    });
+    .fitSize([width, height], { type: "FeatureCollection", features: countries });
 
   const path = d3.geoPath(projection);
+
+  svg.selectAll("*").remove(); // clear if reloaded
 
   svg.append("g")
     .selectAll("path")
     .data(countries)
     .join("path")
-    .attr("class", d =>
-      activeCountries.has(d.properties.name)
-        ? "country country--active"
-        : "country"
-    )
+    .attr("class", d => active.has(d.properties.name) ? "country country--active" : "country")
     .attr("d", path);
 })();
 </script>
