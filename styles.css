@@ -1744,3 +1744,32 @@ input:focus, textarea:focus{
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* ===== Minimal World Map ===== */
+.mapCard{
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 16px 50px rgba(15,23,42,0.06);
+  padding: 10px;
+}
+
+#worldMap{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Base countries */
+.country{
+  fill: #eef2f7;
+  stroke: #cbd5e1;
+  stroke-width: 0.7;
+}
+
+/* Highlighted countries */
+.country--active{
+  fill: #1e3a8a;      /* premium deep blue */
+  stroke: #0f172a;
+  stroke-width: 1;
+}
