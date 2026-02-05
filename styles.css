@@ -1730,3 +1730,17 @@ input:focus, textarea:focus{
   font-size: 13px;
   color: #64748b;
 }
+
+/* Yangon + Shwedagon subtle background */
+.hero--yangon{
+  position: relative;
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.85),
+      rgba(255,255,255,0.92)
+    ),
+    url("assets/bg/yangon-shwedagon.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
