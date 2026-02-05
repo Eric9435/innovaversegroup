@@ -1776,4 +1776,9 @@ input:focus, textarea:focus{
   stroke-width: 1;
 }
 
+.section .muted{
+  margin: 10px 0 18px;
+  max-width: 820px;
+}
+
 
