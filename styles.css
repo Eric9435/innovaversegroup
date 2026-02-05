@@ -1617,3 +1617,42 @@ input:focus, textarea:focus{
   .tsGrid3{ grid-template-columns: 1fr; }
   .tsHeroBlack__titles h1{ font-size: 34px; }
 }
+
+.heroCenter{
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 28px 0;
+}
+
+.heroLogo{
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin: 0 auto 12px;
+}
+
+.heroSub{
+  max-width: 820px;
+  margin: 10px auto 14px;
+  line-height: 1.85;
+  color: var(--muted);
+}
+
+.heroDomains{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 12px 0 16px;
+}
+
+.heroDomains span{
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--navy);
+}
