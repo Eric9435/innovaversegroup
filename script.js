@@ -43,12 +43,12 @@ if (menuBtn && mobileNav) {
 
   // Load world geometry
   const world = await d3.json(
-    "https://unpkg.com/world-atlas@2/countries-110m.json"
+    "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
   );
 
   // Load country names
   const names = await d3.tsv(
-    "https://unpkg.com/world-atlas@2/countries-110m.tsv"
+    "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.tsv"
   );
 
   // Map id → country name
