@@ -3,59 +3,239 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>InnovateX | Innovaverse Group</title>
+  <title>Tech Think-Tank by Innovaverse | Innovaverse Group</title>
+  <meta name="description" content="Tech Think-Tank by Innovaverse — research, innovation, and a knowledge hub supporting engineering and intelligent systems." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="../styles.css" />
 </head>
+
 <body>
+
+  <!-- HEADER (same group theme) -->
   <header class="header">
     <div class="container header__inner">
-      <a class="brand" href="../index.html">
-        <img class="brand__logo" src="../assets/logo.jpg" alt="Innovaverse logo" />
+      <a class="brand" href="../index.html" aria-label="Innovaverse Group Home">
+        <img class="brand__logo" src="../assets/logo.png" alt="Innovaverse Group logo" />
         <span class="brand__name">Innovaverse Group</span>
       </a>
+
       <nav class="nav" aria-label="Primary">
         <a href="../index.html#companies">Companies</a>
-        <a href="../index.html#projects">Projects</a>
+        <a href="#webinar">Webinar</a>
+        <a href="#blog">Blog</a>
         <a class="btn btn--primary" href="../index.html#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="section">
-      <div class="container">
-        <div class="section__head">
-          <h2>InnovateX (Automation Labs)</h2>
-          <p>PLC • SCADA • BMS • Robotics • AI</p>
+
+    <!-- TECH THINK HERO (premium, clean, authority) -->
+    <section class="ttHero">
+      <div class="container ttHero__inner">
+
+        <div class="ttHero__top">
+          <img class="ttHero__logo" src="../assets/companies/thinktank.png" alt="Tech Think-Tank logo">
+          <div>
+            <div class="ttBadge">Research • Innovation • Knowledge Hub</div>
+            <h1>Tech Think-Tank by Innovaverse</h1>
+            <p class="ttSub">
+              A structured knowledge hub to document, refine, and share engineering intelligence —
+              spanning automation, systems, standards, and future-ready technologies.
+            </p>
+
+            <div class="ttActions">
+              <a class="btn btn--primary" href="#webinar">View Next Webinar</a>
+              <a class="btn btn--ghost" href="#blog">Read Blog</a>
+            </div>
+          </div>
         </div>
 
-        <div class="grid2">
-          <article class="card">
-            <h3>Services</h3>
-            <ul class="list">
-              <li>PLC programming & commissioning</li>
-              <li>SCADA design & integration</li>
-              <li>BMS integration & optimization</li>
-              <li>Automation R&D roadmap</li>
-            </ul>
-          </article>
+        <div class="ttStats">
+          <div class="ttStat">
+            <div class="ttStat__num">Knowledge</div>
+            <div class="ttStat__label">Practical engineering learning</div>
+          </div>
+          <div class="ttStat">
+            <div class="ttStat__num">Research</div>
+            <div class="ttStat__label">Structured thinking & analysis</div>
+          </div>
+          <div class="ttStat">
+            <div class="ttStat__num">Webinars</div>
+            <div class="ttStat__label">Community learning sessions</div>
+          </div>
+          <div class="ttStat">
+            <div class="ttStat__num">Publishing</div>
+            <div class="ttStat__label">Articles, notes, and frameworks</div>
+          </div>
+        </div>
 
+      </div>
+    </section>
+
+    <!-- WHAT WE DO -->
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="section__head">
+          <h2>What We Do</h2>
+          <p>High-signal content designed for engineers, builders, and decision-makers.</p>
+        </div>
+
+        <div class="grid3">
           <article class="card">
-            <h3>Profile</h3>
-            <p>
-              InnovateX delivers industrial-grade automation solutions with premium documentation,
-              stable systems architecture, and measurable performance outcomes.
-            </p>
+            <h3>Research & Insight</h3>
+            <p>Translate complex engineering topics into clear, usable frameworks.</p>
+          </article>
+          <article class="card">
+            <h3>Knowledge Systems</h3>
+            <p>Build structured libraries: SOPs, standards, checklists, and reference notes.</p>
+          </article>
+          <article class="card">
+            <h3>Education & Sharing</h3>
+            <p>Webinars and publishing that strengthen engineering capability at scale.</p>
           </article>
         </div>
       </div>
     </section>
+
+    <!-- NEXT WEBINAR -->
+    <section class="section section--alt" id="webinar">
+      <div class="container">
+        <div class="section__head">
+          <h2>Next Webinar</h2>
+          <p>A focused session designed to deliver practical clarity — not hype.</p>
+        </div>
+
+        <div class="webinarGrid">
+
+          <!-- Webinar details -->
+          <article class="webinarCard">
+            <div class="webinarTop">
+              <span class="webinarTag">Upcoming</span>
+              <span class="webinarTag webinarTag--soft">Tech Think-Tank Series</span>
+            </div>
+
+            <h3 class="webinarTitle">Title: <span class="muted">[Set Your Webinar Title Here]</span></h3>
+
+            <div class="webinarMeta">
+              <div class="webinarMeta__row">
+                <span class="k">Topic(s)</span>
+                <span class="v">
+                  • [Topic 01]<br>
+                  • [Topic 02]<br>
+                  • [Topic 03]
+                </span>
+              </div>
+
+              <div class="webinarMeta__row">
+                <span class="k">Speaker</span>
+                <span class="v">[Speaker Name] — [Role / Credential]</span>
+              </div>
+
+              <div class="webinarMeta__row">
+                <span class="k">Platform</span>
+                <span class="v">[Zoom / Google Meet / Microsoft Teams]</span>
+              </div>
+
+              <div class="webinarMeta__row">
+                <span class="k">Date & Time</span>
+                <span class="v">[Day, DD Mon YYYY — 7:30 PM (MMT)]</span>
+              </div>
+            </div>
+
+            <div class="webinarNote">
+              Registration: Join our Telegram channel for updates and access details.
+            </div>
+          </article>
+
+          <!-- Telegram QR -->
+          <aside class="qrCard">
+            <div class="qrHead">
+              <h3>Telegram Access</h3>
+              <p class="muted">Scan to join the channel</p>
+            </div>
+
+            <div class="qrBox">
+              <!-- Replace this image with your QR -->
+              <img src="../assets/qr/telegram.png" alt="Telegram QR Code">
+            </div>
+
+            <div class="qrHint">
+              Place your QR image at:<br>
+              <code>assets/qr/telegram.png</code>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG POSTS -->
+    <section class="section" id="blog">
+      <div class="container">
+        <div class="section__head">
+          <h2>Blog Posts</h2>
+          <p>Short, high-quality articles — designed for clarity and engineering usefulness.</p>
+        </div>
+
+        <div class="blogGrid">
+
+          <article class="blogCard">
+            <div class="blogMeta">
+              <span class="blogTag">Automation</span>
+              <span class="blogDate">[DD Mon YYYY]</span>
+            </div>
+            <h3>How to Structure a PLC/SCADA Project for Clean Handover</h3>
+            <p>Documentation flow, naming discipline, alarms, trends, and a practical delivery checklist.</p>
+            <a class="blogLink" href="#">Read Article →</a>
+          </article>
+
+          <article class="blogCard">
+            <div class="blogMeta">
+              <span class="blogTag">MEP</span>
+              <span class="blogDate">[DD Mon YYYY]</span>
+            </div>
+            <h3>MEP Coordination: The Minimum System to Avoid Site Chaos</h3>
+            <p>A simple coordination rhythm, interface control, and punch-list management method.</p>
+            <a class="blogLink" href="#">Read Article →</a>
+          </article>
+
+          <article class="blogCard">
+            <div class="blogMeta">
+              <span class="blogTag">Strategy</span>
+              <span class="blogDate">[DD Mon YYYY]</span>
+            </div>
+            <h3>Engineering + Systems Thinking: Building a Premium Execution Mindset</h3>
+            <p>Why structured processes win: repeatability, quality, speed, and credibility.</p>
+            <a class="blogLink" href="#">Read Article →</a>
+          </article>
+
+        </div>
+
+        <div style="text-align:center; margin-top:16px;">
+          <a class="btn btn--ghost" href="#">View All Posts</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--alt">
+      <div class="container" style="text-align:center;">
+        <h2 style="margin-bottom:10px;">Collaborate with Tech Think-Tank</h2>
+        <p class="muted" style="margin:0 0 18px;">
+          For research, content development, or structured knowledge systems — contact Innovaverse Group.
+        </p>
+        <a class="btn btn--primary" href="../index.html#contact">Go to Contact</a>
+      </div>
+    </section>
+
   </main>
 
   <script src="../script.js"></script>
 </body>
 </html>
-
