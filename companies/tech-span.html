@@ -3,59 +3,304 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>InnovateX | Innovaverse Group</title>
+  <title>Tech Span Consultants | Innovaverse Group</title>
+  <meta name="description" content="Tech Span Consultants provides engineering and strategy consulting with disciplined documentation and premium execution standards." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="../styles.css" />
 </head>
-<body>
-  <header class="header">
+
+<body class="tsBlack">
+
+  <!-- HEADER (Black theme) -->
+  <header class="header header--dark">
     <div class="container header__inner">
-      <a class="brand" href="../index.html">
-        <img class="brand__logo" src="../assets/logo.png" alt="Innovaverse logo" />
+      <a class="brand brand--dark" href="../index.html" aria-label="Innovaverse Group Home">
+        <img class="brand__logo" src="../assets/logo.png" alt="Innovaverse Group logo" />
         <span class="brand__name">Innovaverse Group</span>
       </a>
-      <nav class="nav" aria-label="Primary">
+
+      <nav class="nav nav--dark" aria-label="Primary">
         <a href="../index.html#companies">Companies</a>
-        <a href="../index.html#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#model">Engagement</a>
+        <a href="#deliverables">Deliverables</a>
         <a class="btn btn--primary" href="../index.html#contact">Contact</a>
       </nav>
+
+      <button class="menuBtn menuBtn--dark" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div class="mobileNav mobileNav--dark" id="mobileNav" hidden>
+      <div class="container mobileNav__inner">
+        <a href="../index.html#companies">Companies</a>
+        <a href="#services">Services</a>
+        <a href="#model">Engagement</a>
+        <a href="#deliverables">Deliverables</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="section">
-      <div class="container">
-        <div class="section__head">
-          <h2>InnovateX (Automation Labs)</h2>
-          <p>PLC • SCADA • BMS • Robotics • AI</p>
+
+    <!-- HERO -->
+    <section class="tsHeroBlack">
+      <div class="container tsHeroBlack__inner">
+
+        <div class="tsHeroBlack__badge">Engineering & Strategy Consulting</div>
+
+        <div class="tsHeroBlack__top">
+          <div class="tsHeroBlack__brand">
+            <img class="tsHeroBlack__logo" src="../assets/companies/techspan.png" alt="Tech Span Consultants logo">
+            <div class="tsHeroBlack__titles">
+              <h1>Tech Span Consultants</h1>
+              <p class="tsHeroBlack__sub">
+                Structured consulting for technical and business decisions — disciplined documentation, clear scope,
+                and execution-aligned recommendations.
+              </p>
+
+              <div class="tsHeroBlack__cta">
+                <a class="btn btn--primary" href="#services">Explore Services</a>
+                <a class="btn btn--ghost btn--ghostDark" href="../index.html#contact">Contact</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="tsHeroBlack__panel">
+            <div class="tsPanel">
+              <div class="tsPanel__kicker">Consulting Standard</div>
+              <div class="tsPanel__title">Clarity → Structure → Execution</div>
+              <div class="tsPanel__desc">
+                We transform complex engineering and operational decisions into structured plans and usable deliverables.
+              </div>
+              <div class="tsPills">
+                <span>Scope Control</span>
+                <span>Risk Discipline</span>
+                <span>Documentation</span>
+                <span>Decision Logs</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="grid2">
-          <article class="card">
-            <h3>Services</h3>
-            <ul class="list">
-              <li>PLC programming & commissioning</li>
-              <li>SCADA design & integration</li>
-              <li>BMS integration & optimization</li>
-              <li>Automation R&D roadmap</li>
-            </ul>
-          </article>
+        <div class="tsHeroBlack__stats">
+          <div class="tsStatBlack">
+            <div class="tsStatBlack__num">Clarity</div>
+            <div class="tsStatBlack__label">Define scope & decisions</div>
+          </div>
+          <div class="tsStatBlack">
+            <div class="tsStatBlack__num">Structure</div>
+            <div class="tsStatBlack__label">Frameworks & systems</div>
+          </div>
+          <div class="tsStatBlack">
+            <div class="tsStatBlack__num">Execution</div>
+            <div class="tsStatBlack__label">Actionable outputs</div>
+          </div>
+          <div class="tsStatBlack">
+            <div class="tsStatBlack__num">Premium</div>
+            <div class="tsStatBlack__label">Professional deliverables</div>
+          </div>
+        </div>
 
-          <article class="card">
-            <h3>Profile</h3>
-            <p>
-              InnovateX delivers industrial-grade automation solutions with premium documentation,
-              stable systems architecture, and measurable performance outcomes.
-            </p>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="tsSection tsSection--dark" id="overview">
+      <div class="container">
+        <div class="tsHead">
+          <h2>Overview</h2>
+          <p>
+            Tech Span Consultants supports organizations that require disciplined technical reasoning and structured
+            decision-making — from engineering scope definition to strategic planning and documentation systems.
+          </p>
+        </div>
+
+        <div class="tsGrid3">
+          <article class="tsCardDark">
+            <h3>Engineering Advisory</h3>
+            <p>Design review, constructability checks, risk identification, and decision support.</p>
+          </article>
+          <article class="tsCardDark">
+            <h3>Strategy & Operations</h3>
+            <p>Operating models, KPI systems, workflows, and scalable execution structures.</p>
+          </article>
+          <article class="tsCardDark">
+            <h3>Documentation Systems</h3>
+            <p>Standards, templates, reporting packs, SOP libraries, and document control.</p>
           </article>
         </div>
       </div>
     </section>
+
+    <!-- SERVICES -->
+    <section class="tsSection tsSection--darkAlt" id="services">
+      <div class="container">
+        <div class="tsHead">
+          <h2>Services</h2>
+          <p>Core consulting services across engineering delivery, execution control, and strategy.</p>
+        </div>
+
+        <div class="tsGrid2">
+          <article class="tsCardDark">
+            <h3>Engineering Consulting</h3>
+            <ul class="tsList">
+              <li>Scope definition and requirements clarification</li>
+              <li>Design review and constructability checks</li>
+              <li>MEP/ACMV coordination planning support</li>
+              <li>Risk identification and mitigation planning</li>
+              <li>Technical reporting and premium documentation</li>
+            </ul>
+          </article>
+
+          <article class="tsCardDark">
+            <h3>Project & Execution Support</h3>
+            <ul class="tsList">
+              <li>Planning rhythm, sequencing, and delivery control</li>
+              <li>QA/QC checklists, inspections, punch-list systems</li>
+              <li>Progress reporting and issue tracking cadence</li>
+              <li>Handover readiness and deliverable control</li>
+              <li>Decision logs and coordination systems</li>
+            </ul>
+          </article>
+
+          <article class="tsCardDark">
+            <h3>Strategy Consulting</h3>
+            <ul class="tsList">
+              <li>Service packaging and positioning</li>
+              <li>Operating systems: roles, workflows, accountability</li>
+              <li>KPI design and reporting dashboards</li>
+              <li>Scaling roadmap for multi-division operations</li>
+              <li>Execution standards and governance</li>
+            </ul>
+          </article>
+
+          <article class="tsCardDark">
+            <h3>Documentation & Knowledge Systems</h3>
+            <ul class="tsList">
+              <li>SOP libraries and structured templates</li>
+              <li>Engineering knowledge base architecture</li>
+              <li>Proposal writing and profile structuring</li>
+              <li>Training notes and internal standards</li>
+              <li>Document control and folder systems</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGAGEMENT MODEL -->
+    <section class="tsSection tsSection--dark" id="model">
+      <div class="container">
+        <div class="tsHead">
+          <h2>Engagement Model</h2>
+          <p>Simple, professional, and execution-aligned — focused on outcomes and usable deliverables.</p>
+        </div>
+
+        <div class="tsGrid3">
+          <article class="tsCardDark">
+            <div class="tsStep">01</div>
+            <h3>Diagnose</h3>
+            <p>Understand objectives, constraints, risks, and decision points. Collect evidence.</p>
+          </article>
+          <article class="tsCardDark">
+            <div class="tsStep">02</div>
+            <h3>Structure</h3>
+            <p>Convert complexity into clear scope, frameworks, and actionable options.</p>
+          </article>
+          <article class="tsCardDark">
+            <div class="tsStep">03</div>
+            <h3>Deliver</h3>
+            <p>Provide premium outputs: reports, plans, templates, and implementation guidance.</p>
+          </article>
+        </div>
+
+        <div class="tsStripDark">
+          <div class="tsStripDark__row">
+            <span class="k">Format</span>
+            <span class="v">Remote / On-site • Project-based • Retainer</span>
+          </div>
+          <div class="tsStripDark__row">
+            <span class="k">Outputs</span>
+            <span class="v">Reports • Plans • Templates • SOPs • Operating Systems</span>
+          </div>
+          <div class="tsStripDark__row">
+            <span class="k">Priority</span>
+            <span class="v">Clarity • Execution • Quality • Credibility</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DELIVERABLES -->
+    <section class="tsSection tsSection--darkAlt" id="deliverables">
+      <div class="container">
+        <div class="tsHead">
+          <h2>Typical Deliverables</h2>
+          <p>Professional outputs designed to be usable immediately by management and site teams.</p>
+        </div>
+
+        <div class="tsGrid3">
+          <article class="tsCardDark">
+            <h3>Consulting Report</h3>
+            <p>Findings, risks, recommendations, and next-step actions — clearly documented.</p>
+          </article>
+          <article class="tsCardDark">
+            <h3>Templates & SOPs</h3>
+            <p>Checklists, workflows, reporting formats, and repeatable execution systems.</p>
+          </article>
+          <article class="tsCardDark">
+            <h3>Execution Plan</h3>
+            <p>Scope breakdown, timeline rhythm, reporting cadence, and delivery control.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="tsSection tsSection--dark" id="industries">
+      <div class="container">
+        <div class="tsHead">
+          <h2>Industries</h2>
+          <p>Typical sectors supported (expand as your references grow).</p>
+        </div>
+
+        <div class="tsGrid3">
+          <article class="tsCardDark"><h3>Commercial</h3><p>Facilities, offices, retail — scope control and execution rhythm.</p></article>
+          <article class="tsCardDark"><h3>Industrial</h3><p>Plants and workshops — practical engineering clarity and documentation.</p></article>
+          <article class="tsCardDark"><h3>Infrastructure</h3><p>Delivery control, reporting discipline, and coordination systems.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="tsSection tsSection--darkAlt" id="cta">
+      <div class="container" style="text-align:center;">
+        <h2 style="margin:0 0 10px;">Work with Tech Span Consultants</h2>
+        <p class="tsMuted" style="margin:0 0 18px;">
+          For consulting engagements, engineering advisory, or structured documentation systems — contact Innovaverse Group.
+        </p>
+        <a class="btn btn--primary" href="../index.html#contact">Go to Contact</a>
+      </div>
+    </section>
+
+    <!-- FOOTER (simple, dark) -->
+    <footer class="tsFooter">
+      <div class="container tsFooter__inner">
+        <div>© <span id="year"></span> Innovaverse Group. All rights reserved.</div>
+        <div class="tsFooter__mini">Tech Span Consultants</div>
+      </div>
+    </footer>
+
   </main>
 
   <script src="../script.js"></script>
 </body>
 </html>
-
