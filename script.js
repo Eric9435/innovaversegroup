@@ -20,3 +20,50 @@ if (menuBtn && mobileNav) {
   });
 }
 
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+<script>
+(async function(){
+  const svg = d3.select("#worldMap");
+  const width = 1100, height = 560;
+
+  const activeCountries = new Set([
+    "United States of America",
+    "United Kingdom",
+    "Ireland",
+    "Myanmar",
+    "Singapore",
+    "Thailand",
+    "Vietnam",
+    "China"
+  ]);
+
+  const world = await d3.json(
+    "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
+  );
+
+  const countries = topojson.feature(
+    world,
+    world.objects.countries
+  ).features;
+
+  const projection = d3.geoNaturalEarth1()
+    .fitSize([width, height], {
+      type: "FeatureCollection",
+      features: countries
+    });
+
+  const path = d3.geoPath(projection);
+
+  svg.append("g")
+    .selectAll("path")
+    .data(countries)
+    .join("path")
+    .attr("class", d =>
+      activeCountries.has(d.properties.name)
+        ? "country country--active"
+        : "country"
+    )
+    .attr("d", path);
+})();
+</script>
