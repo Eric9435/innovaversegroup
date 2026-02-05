@@ -1752,11 +1752,13 @@ input:focus, textarea:focus{
   background: #ffffff;
   box-shadow: 0 16px 50px rgba(15,23,42,0.06);
   padding: 10px;
+  overflow: hidden;
 }
 
+/* SVG must have a visible height */
 #worldMap{
   width: 100%;
-  height: auto;
+  height: 560px;              /* IMPORTANT: prevents blank */
   display: block;
 }
 
@@ -1769,15 +1771,9 @@ input:focus, textarea:focus{
 
 /* Highlighted countries */
 .country--active{
-  fill: #1e3a8a;      /* premium deep blue */
+  fill: #1e3a8a;              /* premium deep blue */
   stroke: #0f172a;
   stroke-width: 1;
 }
 
-#worldMap{
-  width: 100%;
-  aspect-ratio: 1100 / 560;  /* keeps height visible */
-  height: auto;
-  display: block;
-}
 
