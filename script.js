@@ -22,14 +22,13 @@ if (menuBtn && mobileNav) {
 
 (async function () {
 
-  // Get SVG
   const svg = d3.select("#worldMap");
   if (svg.empty()) return;
 
   const width = 1100;
   const height = 560;
 
-  // Countries to highlight
+  // Countries you want highlighted
   const activeCountries = new Set([
     "United States of America",
     "United Kingdom",
@@ -41,31 +40,15 @@ if (menuBtn && mobileNav) {
     "China"
   ]);
 
-  // Load world geometry
+  // Load world map (JSON only)
   const world = await d3.json(
     "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
   );
 
-  // Load country names
-  const names = await d3.tsv(
-    "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.tsv"
-  );
-
-  // Map id → country name
-  const nameById = new Map();
-  names.forEach(d => nameById.set(d.id, d.name));
-
-  // Convert topojson to geojson
   const countries = topojson.feature(
     world,
     world.objects.countries
   ).features;
-
-  // Attach country names
-  countries.forEach(c => {
-    c.properties = c.properties || {};
-    c.properties.name = nameById.get(c.id) || "";
-  });
 
   // Projection
   const projection = d3.geoNaturalEarth1()
@@ -76,10 +59,8 @@ if (menuBtn && mobileNav) {
 
   const path = d3.geoPath(projection);
 
-  // Clear SVG
   svg.selectAll("*").remove();
 
-  // Draw map
   svg.append("g")
     .selectAll("path")
     .data(countries)
@@ -92,4 +73,3 @@ if (menuBtn && mobileNav) {
     );
 
 })();
-
