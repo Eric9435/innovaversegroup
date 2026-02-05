@@ -20,18 +20,17 @@ if (menuBtn && mobileNav) {
   });
 }
 
-<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-<script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-
-<script>
 (async function () {
+
+  // Get SVG
   const svg = d3.select("#worldMap");
   if (svg.empty()) return;
 
-  const width = 1100, height = 560;
+  const width = 1100;
+  const height = 560;
 
-  // Countries to highlight (names from country-names.tsv)
-  const active = new Set([
+  // Countries to highlight
+  const activeCountries = new Set([
     "United States of America",
     "United Kingdom",
     "Ireland",
@@ -42,27 +41,55 @@ if (menuBtn && mobileNav) {
     "China"
   ]);
 
-  // Load topojson + names table (IMPORTANT)
-  const world = await d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json");
-  const names = await d3.tsv("https://cdn.jsdelivr.net/npm/world-atlas@2/country-names.tsv");
+  // Load world geometry
+  const world = await d3.json(
+    "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
+  );
 
-  const nameById = new Map(names.map(d => [d.id, d.name]));
+  // Load country names
+  const names = await d3.tsv(
+    "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.tsv"
+  );
 
-  const countries = topojson.feature(world, world.objects.countries).features;
-  countries.forEach(d => d.properties = { name: nameById.get(String(d.id)) });
+  // Map id → country name
+  const nameById = new Map();
+  names.forEach(d => nameById.set(d.id, d.name));
 
+  // Convert topojson to geojson
+  const countries = topojson.feature(
+    world,
+    world.objects.countries
+  ).features;
+
+  // Attach country names
+  countries.forEach(c => {
+    c.properties = c.properties || {};
+    c.properties.name = nameById.get(c.id) || "";
+  });
+
+  // Projection
   const projection = d3.geoNaturalEarth1()
-    .fitSize([width, height], { type: "FeatureCollection", features: countries });
+    .fitSize([width, height], {
+      type: "FeatureCollection",
+      features: countries
+    });
 
   const path = d3.geoPath(projection);
 
-  svg.selectAll("*").remove(); // clear if reloaded
+  // Clear SVG
+  svg.selectAll("*").remove();
 
+  // Draw map
   svg.append("g")
     .selectAll("path")
     .data(countries)
     .join("path")
-    .attr("class", d => active.has(d.properties.name) ? "country country--active" : "country")
-    .attr("d", path);
+    .attr("d", path)
+    .attr("class", d =>
+      activeCountries.has(d.properties.name)
+        ? "country country--active"
+        : "country"
+    );
+
 })();
-</script>
+
