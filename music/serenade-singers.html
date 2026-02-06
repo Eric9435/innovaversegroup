@@ -3,21 +3,191 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Serenade For All (Serenade Singers) | Innovaverse Group</title>
+  <title>Serenade Singers | Innovaverse Group</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-        content="Serenade For All (Serenade Singers) is a choir and music initiative under Innovaverse Skills & Innovation, focused on performance, training, and structured artistic development.">
+        content="Serenade Singers is a premium choir and performance initiative under Innovaverse Skills & Education, focused on training, performance standards, and disciplined ensemble culture.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- Global stylesheet -->
   <link rel="stylesheet" href="../styles.css">
+
+  <!-- Page-only styles -->
+  <style>
+    :root{
+      --serenade-navy: #0E2A43;
+      --serenade-gold: #C7A04A;
+      --serenade-gold-deep: #B6892F;
+      --serenade-offwhite: #F7F5F1;
+    }
+
+    .serenadeHeroCard{
+      border: 1px solid rgba(14,42,67,0.12);
+      background: var(--serenade-offwhite);
+    }
+
+    .serenadeHeroGrid{
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .serenadeLogoWrap{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 18px;
+    }
+
+    .serenadeLogo{
+      width: 180px;
+      height: auto;
+      object-fit: contain;
+      display:block;
+    }
+
+    .serenadeEyebrow{
+      color: var(--serenade-navy);
+      opacity: .9;
+    }
+
+    .serenadeTitle{
+      color: var(--serenade-navy);
+      margin: 6px 0 8px;
+    }
+
+    .pillRow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:12px;
+    }
+    .pill{
+      font-size:12px;
+      font-weight:800;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(14,42,67,0.16);
+      background:#fff;
+      color: var(--serenade-navy);
+    }
+
+    .linkRow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
+    .miniLink{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(15,23,42,0.10);
+      background:#fff;
+      text-decoration:none;
+      font-weight:800;
+      color: var(--serenade-navy);
+    }
+    .miniLink:hover{ text-decoration: underline; }
+
+    .qrGrid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap:18px;
+      margin-top: 18px;
+    }
+    .qrCard{
+      border: 1px solid rgba(15,23,42,0.10);
+      border-radius: 18px;
+      background:#fff;
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(15,23,42,0.05);
+    }
+    .qrTop{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .qrTitle{
+      font-weight: 900;
+      color: var(--serenade-navy);
+      margin: 0;
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+    .qrMeta{
+      margin: 6px 0 0;
+      color: #6b7280;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .qrImg{
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 14px;
+      border: 1px solid rgba(15,23,42,0.10);
+      background: #f8fafc;
+      object-fit: cover;
+      display:block;
+    }
+    .qrActions{
+      margin-top: 12px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .qrBtn{
+      display:inline-block;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(15,23,42,0.12);
+      text-decoration:none;
+      font-weight: 900;
+      color: #0f172a;
+      background:#fff;
+    }
+    .qrBtn:hover{ text-decoration: underline; }
+
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .gallery img{
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 1px solid rgba(15,23,42,0.08);
+      background:#f8fafc;
+      display:block;
+    }
+
+    .quoteCard{
+      border-left: 4px solid var(--serenade-gold);
+    }
+
+    @media (max-width: 900px){
+      .serenadeHeroGrid{ grid-template-columns: 1fr; text-align:center; }
+      .pillRow{ justify-content:center; }
+      .qrGrid{ grid-template-columns: 1fr; }
+      .gallery{ grid-template-columns: 1fr; }
+      .gallery img{ height: 240px; }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="container header__inner">
     <a class="brand" href="../index.html">
@@ -26,7 +196,7 @@
     </a>
 
     <nav class="nav">
-      <a href="../companies/skills-innovation.html">Skills & Innovation</a>
+      <a href="../companies/skills-education.html">Skills & Education</a>
       <a href="../index.html#contact">Contact</a>
     </nav>
   </div>
@@ -39,16 +209,15 @@
   <div class="container">
 
     <div class="hero__identity">
-      <div class="hero__company">Innovaverse Skills & Innovation</div>
-      <p class="eyebrow">MUSIC & CREATIVE EDUCATION</p>
+      <div class="hero__company">Innovaverse Skills & Education</div>
+      <p class="eyebrow serenadeEyebrow">MUSIC DIVISION</p>
     </div>
 
-    <h1>Serenade For All</h1>
+    <h1>Serenade Singers</h1>
 
     <p class="lead">
-      Serenade For All is a structured choir and performance initiative —
-      presented through the Serenade Singers identity — focused on musical discipline,
-      ensemble excellence, and professional artistic development.
+      A structured choir and performance initiative focused on disciplined rehearsal culture,
+      vocal development, and professional presentation standards.
     </p>
 
   </div>
@@ -58,148 +227,211 @@
 <section class="section section--alt">
   <div class="container">
 
-    <div class="card serenadeCard">
-      <div class="serenadeCard__grid">
-        <div class="serenadeCard__logoWrap">
-          <!-- Put your logo here -->
-          <img
-            src="../assets/serenade/serenade-logo.png"
-            alt="Serenade Singers Logo"
-            class="serenadeCard__logo">
+    <div class="card serenadeHeroCard">
+      <div class="serenadeHeroGrid">
+
+        <div class="serenadeLogoWrap">
+          <!-- REQUIRED FILE: assets/serenade/serenade-logo.png -->
+          <img class="serenadeLogo"
+               src="../assets/serenade/serenade-logo.png"
+               alt="Serenade Singers Logo">
         </div>
 
-        <div class="serenadeCard__copy">
+        <div>
           <p class="eyebrow serenadeEyebrow">SERENADE SINGERS</p>
           <h2 class="serenadeTitle">Choir • Training • Performance</h2>
           <p class="muted">
-            A premium, disciplined choir ecosystem under Innovaverse — designed for
-            structured training, performance readiness, and long-term musical growth.
+            Serenade Singers operates under the Serenade For All initiative within Innovaverse.
+            We develop ensemble discipline, musicianship, and performance readiness through structured programs.
           </p>
 
           <div class="pillRow">
-            <span class="pill">Choral Excellence</span>
             <span class="pill">Rehearsal Discipline</span>
+            <span class="pill">Vocal Technique</span>
+            <span class="pill">Ensemble Blend</span>
             <span class="pill">Performance Standards</span>
           </div>
+
+          <!-- Social links (requested) -->
+          <div class="linkRow">
+            <!-- Replace # with your real links -->
+            <a class="miniLink" href="#" target="_blank" rel="noopener">Facebook Page</a>
+            <a class="miniLink" href="#" target="_blank" rel="noopener">Instagram</a>
+          </div>
+
         </div>
+
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- OVERVIEW -->
+<!-- QR + LINKS -->
 <section class="section">
   <div class="container">
 
     <div class="section__head">
-      <h2>Overview</h2>
+      <h2>Channels & Registration</h2>
       <p class="muted">
-        Serenade For All supports students and performers through an ensemble framework that
-        develops vocal technique, musicianship, and performance confidence with consistent standards.
+        Use the links below for official communication, registration, and feedback.
       </p>
     </div>
 
-    <div class="grid-3">
-      <div class="card card--soft">
-        <h3>Training</h3>
-        <p>Vocal fundamentals, sight-singing, rhythm discipline, ensemble blend, and rehearsal structure.</p>
+    <div class="qrGrid">
+
+      <!-- TELEGRAM -->
+      <div class="qrCard">
+        <div class="qrTop">
+          <div>
+            <p class="qrTitle">Telegram Channel</p>
+            <p class="qrMeta">Join for announcements, rehearsal updates, and notices.</p>
+          </div>
+        </div>
+
+        <!-- REQUIRED FILE: assets/serenade/qr-telegram.png -->
+        <img class="qrImg" src="../assets/serenade/qr-telegram.png" alt="Telegram QR Code">
+
+        <div class="qrActions">
+          <!-- Replace with your Telegram link -->
+          <a class="qrBtn" href="#" target="_blank" rel="noopener">Open Telegram</a>
+        </div>
       </div>
 
-      <div class="card card--soft">
-        <h3>Performance</h3>
-        <p>Curated repertoire, staging readiness, concert preparation, and professional presentation.</p>
+      <!-- REGISTRATION -->
+      <div class="qrCard">
+        <div class="qrTop">
+          <div>
+            <p class="qrTitle">Registration</p>
+            <p class="qrMeta">Apply to join Serenade Singers or register for auditions.</p>
+          </div>
+        </div>
+
+        <!-- REQUIRED FILE: assets/serenade/qr-registration.png -->
+        <img class="qrImg" src="../assets/serenade/qr-registration.png" alt="Registration QR Code">
+
+        <div class="qrActions">
+          <!-- Replace with your registration form link -->
+          <a class="qrBtn" href="#" target="_blank" rel="noopener">Open Registration</a>
+        </div>
       </div>
 
-      <div class="card card--soft">
-        <h3>Community</h3>
-        <p>An inclusive framework that builds confidence, teamwork, and long-term musical identity.</p>
+      <!-- FEEDBACK (Google Form) -->
+      <div class="qrCard">
+        <div class="qrTop">
+          <div>
+            <p class="qrTitle">Feedback</p>
+            <p class="qrMeta">Share feedback via Google Form (anonymous option recommended).</p>
+          </div>
+        </div>
+
+        <!-- REQUIRED FILE: assets/serenade/qr-feedback.png -->
+        <img class="qrImg" src="../assets/serenade/qr-feedback.png" alt="Feedback QR Code">
+
+        <div class="qrActions">
+          <!-- Replace with your Google Form link -->
+          <a class="qrBtn" href="#" target="_blank" rel="noopener">Open Feedback Form</a>
+        </div>
       </div>
+
     </div>
 
   </div>
 </section>
 
-<!-- PROGRAMS -->
+<!-- MUSIC DIRECTOR MESSAGE -->
 <section class="section section--alt">
   <div class="container">
 
     <div class="section__head">
-      <h2>Programs</h2>
+      <h2>Message From the Music Director</h2>
+    </div>
+
+    <div class="card quoteCard">
+      <p class="muted" style="margin:0; line-height:1.9;">
+        <!-- Replace this message with your real director statement -->
+        “Serenade Singers is built on disciplined rehearsal culture and musical integrity.
+        Our goal is to develop confident singers, strong ensemble blend, and performance readiness —
+        through structure, consistency, and respect for the music.”
+      </p>
+      <p style="margin:14px 0 0; font-weight:900; color: var(--serenade-navy);">
+        — Music Director, Serenade Singers
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PAST ACTIVITIES -->
+<section class="section">
+  <div class="container">
+
+    <div class="section__head">
+      <h2>Past Activities</h2>
+      <p class="muted">
+        Selected rehearsals, performances, workshops, and community engagements.
+      </p>
+    </div>
+
+    <div class="gallery">
+      <!-- REQUIRED FILES (examples): assets/serenade/activity-01.jpg ... -->
+      <img src="../assets/serenade/activity-01.jpg" alt="Serenade Singers Activity Photo 01">
+      <img src="../assets/serenade/activity-02.jpg" alt="Serenade Singers Activity Photo 02">
+      <img src="../assets/serenade/activity-03.jpg" alt="Serenade Singers Activity Photo 03">
+      <img src="../assets/serenade/activity-04.jpg" alt="Serenade Singers Activity Photo 04">
+      <img src="../assets/serenade/activity-05.jpg" alt="Serenade Singers Activity Photo 05">
+      <img src="../assets/serenade/activity-06.jpg" alt="Serenade Singers Activity Photo 06">
+    </div>
+
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="section section--alt" id="blog">
+  <div class="container">
+
+    <div class="section__head">
+      <h2>Serenade Singers Blog</h2>
+      <p class="muted">
+        Updates, rehearsal insights, performance notes, and announcements.
+      </p>
     </div>
 
     <div class="grid-2">
+
+      <!-- Blog Card 1 -->
       <article class="card">
-        <h3>Choir Membership Track</h3>
-        <p>
-          A structured rehearsal pathway focused on ensemble discipline, vocal technique, and repertoire development.
+        <p class="eyebrow serenadeEyebrow">BLOG</p>
+        <h3>Rehearsal Culture: What We Build Together</h3>
+        <p class="muted">
+          A short note on discipline, listening, and ensemble blend.
         </p>
-        <ul class="list">
-          <li>Weekly rehearsals (structured)</li>
-          <li>Voice section development</li>
-          <li>Repertoire cycle planning</li>
-        </ul>
+        <!-- Create later: blog/serenade-post-001.html -->
+        <a class="textLink" href="../blog/serenade-post-001.html">Read →</a>
       </article>
 
+      <!-- Blog Card 2 -->
       <article class="card">
-        <h3>Performance Readiness Track</h3>
-        <p>
-          Preparation for public performances and events with professional standards and consistency.
+        <p class="eyebrow serenadeEyebrow">BLOG</p>
+        <h3>Performance Preparation Checklist</h3>
+        <p class="muted">
+          How we prepare: rehearsal structure, staging, and readiness.
         </p>
-        <ul class="list">
-          <li>Concert preparation planning</li>
-          <li>Stage & microphone practice</li>
-          <li>Dress rehearsal workflow</li>
-        </ul>
+        <!-- Create later: blog/serenade-post-002.html -->
+        <a class="textLink" href="../blog/serenade-post-002.html">Read →</a>
       </article>
 
-      <article class="card">
-        <h3>Workshops & Clinics</h3>
-        <p>
-          Focused training sessions for musicianship, sight-singing, rhythm accuracy, and vocal health.
-        </p>
-        <ul class="list">
-          <li>Sight-singing & solfege</li>
-          <li>Rhythm & timing discipline</li>
-          <li>Ensemble blend & balance</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>Collaborations</h3>
-        <p>
-          Partnerships with education programs, cultural events, and institutional initiatives through Innovaverse Group.
-        </p>
-        <ul class="list">
-          <li>Institutional performance support</li>
-          <li>Community music initiatives</li>
-          <li>Special event performances</li>
-        </ul>
-      </article>
     </div>
 
   </div>
 </section>
 
-<!-- ROLE -->
+<!-- CONTACT CTA -->
 <section class="section">
-  <div class="container">
-    <div class="section__head">
-      <h2>Role Within Innovaverse Group</h2>
-      <p class="muted">
-        Serenade For All strengthens Innovaverse’s capability mission by developing creative discipline,
-        confidence, and high-standard performance culture — aligned with long-term human development.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section section--alt">
   <div class="container center">
-    <h2>Engage With Serenade For All</h2>
+    <h2>Engage With Serenade Singers</h2>
     <p class="muted">
-      For membership, events, or collaboration inquiries, please contact Innovaverse Group.
+      For membership, collaborations, or event bookings, contact Innovaverse Group.
     </p>
     <a href="../index.html#contact" class="btn btn--primary">Contact Innovaverse Group</a>
   </div>
@@ -207,7 +439,6 @@
 
 </main>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="container footer__inner">
     <div>© <span id="year"></span> Innovaverse Ltd. All rights reserved.</div>
@@ -217,80 +448,6 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-
-<!-- Page-only styles (keeps your main styles.css untouched) -->
-<style>
-  /* Serenade palette tokens (local) */
-  :root{
-    --serenade-navy: #0E2A43;
-    --serenade-gold: #C7A04A;
-    --serenade-gold-deep: #B6892F;
-    --serenade-offwhite: #F7F5F1;
-  }
-
-  .serenadeCard{
-    background: var(--serenade-offwhite);
-    border: 1px solid rgba(14,42,67,0.12);
-  }
-
-  .serenadeCard__grid{
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    gap: 18px;
-    align-items: center;
-  }
-
-  .serenadeCard__logoWrap{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 18px;
-  }
-
-  .serenadeCard__logo{
-    width: 180px;
-    height: auto;
-    object-fit: contain;
-    display: block;
-  }
-
-  .serenadeEyebrow{
-    color: var(--serenade-navy);
-    opacity: 0.9;
-  }
-
-  .serenadeTitle{
-    margin: 6px 0 8px;
-    color: var(--serenade-navy);
-  }
-
-  .pillRow{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 12px;
-  }
-
-  .pill{
-    font-size: 12px;
-    font-weight: 700;
-    padding: 7px 10px;
-    border-radius: 999px;
-    border: 1px solid rgba(14,42,67,0.16);
-    background: #fff;
-    color: var(--serenade-navy);
-  }
-
-  @media (max-width: 800px){
-    .serenadeCard__grid{
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-    .pillRow{
-      justify-content: center;
-    }
-  }
-</style>
 
 </body>
 </html>
