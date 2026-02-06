@@ -1780,3 +1780,21 @@ input:focus, textarea:focus{
   margin: 10px 0 18px;
   max-width: 820px;
 }
+
+/* ===== Autoplay Silent Video ===== */
+.videoCard{
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #fff;
+  padding: 14px;
+  box-shadow: 0 18px 60px rgba(15,23,42,0.06);
+}
+
+.siteVideo{
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  background: #000;
+  object-fit: cover;
+}
