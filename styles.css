@@ -1798,3 +1798,16 @@ input:focus, textarea:focus{
   background: #000;
   object-fit: cover;
 }
+
+:root{
+  --serenade-navy: #0E2A43;
+  --serenade-navy-deep: #081B2C;
+  --serenade-navy-mid: #1C3F5B;
+
+  --serenade-gold: #C7A04A;
+  --serenade-gold-deep: #B6892F;
+  --serenade-gold-soft: #D9BD7A;
+
+  --serenade-white: #FFFFFF;
+  --serenade-offwhite: #F7F5F1;
+}
