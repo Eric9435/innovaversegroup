@@ -1981,3 +1981,20 @@ input:focus, textarea:focus{
 .btn--primary:hover{
   background: #020617;
 }
+
+#contact {
+  padding: 100px 0;
+  text-align: center;
+}
+
+#contact p {
+  max-width: 680px;
+  margin: 12px auto;
+}
+
+.contact-email {
+  margin-top: 18px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
