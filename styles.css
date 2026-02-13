@@ -1998,3 +1998,59 @@ input:focus, textarea:focus{
   font-weight: 700;
 }
 
+/* =======================================
+   INNOVATEX PROJECT SECTION
+======================================= */
+
+.specGrid{
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.specItem{
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(15,23,42,0.08);
+  background: #ffffff;
+  font-size: 14px;
+}
+
+.specLabel{
+  font-weight: 700;
+  color: #475569;
+}
+
+.specValue{
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.projectGallery{
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.projectGallery img{
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(15,23,42,0.08);
+  box-shadow: 0 10px 30px rgba(15,23,42,0.05);
+}
+
+@media (max-width: 900px){
+  .specGrid{
+    grid-template-columns: 1fr;
+  }
+
+  .projectGallery{
+    grid-template-columns: 1fr;
+  }
+}
