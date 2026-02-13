@@ -2054,3 +2054,42 @@ input:focus, textarea:focus{
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== FORCE TRUE CENTER: CONTACT + REGISTRATION (GLOBAL) ===== */
+
+#contact .container,
+#registration .container{
+  text-align: center;
+}
+
+#contact .section__head,
+#registration .section__head{
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#contact p,
+#registration p{
+  max-width: 760px;
+  margin: 12px auto;
+}
+
+/* Email line: make it visually centered + premium weight */
+#contact .contact-email{
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Registration image (seal/certificate preview) */
+#registration img{
+  display: block;
+  margin: 22px auto 0;
+  max-width: 520px;
+  width: 100%;
+  height: auto;
+}
