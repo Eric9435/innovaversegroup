@@ -1,0 +1,938 @@
+<!-- FILE: companies/shwe-htake-tin.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shwe Htake Tin | Gold & Jewellery</title>
+  <meta name="description" content="Shwe Htake Tin — Gold & Jewellery. Premium craftsmanship, curated collections, and verified governance." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Your main group stylesheet -->
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Page-only luxury styling -->
+  <style>
+    :root{
+      --sht-bg: #0B0A07;
+      --sht-bg2: #14110A;
+      --sht-card: rgba(255,255,255,0.06);
+      --sht-line: rgba(255,255,255,0.12);
+      --sht-text: rgba(255,255,255,0.92);
+      --sht-muted: rgba(255,255,255,0.70);
+      --sht-gold: #C7A04A;
+      --sht-gold2:#B6892F;
+      --sht-ivory:#F6F1E6;
+      --sht-shadow: 0 18px 60px rgba(0,0,0,0.45);
+      --radius: 22px;
+    }
+
+    body{
+      background: radial-gradient(1200px 600px at 20% 10%, rgba(199,160,74,0.18), transparent 55%),
+                  radial-gradient(900px 520px at 80% 20%, rgba(182,137,47,0.14), transparent 60%),
+                  linear-gradient(180deg, var(--sht-bg), var(--sht-bg2));
+      color: var(--sht-text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    /* Blend header into luxury theme (keeps your group structure) */
+    .header{ background: rgba(10,10,10,0.35); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav a{ color: rgba(255,255,255,0.82); }
+    .nav a:hover{ color: #fff; }
+
+    /* HERO */
+    .sht-hero{ padding: 92px 0 54px; position: relative; }
+    .sht-hero__grid{
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .sht-badge{
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(199,160,74,0.35);
+      background: rgba(199,160,74,0.08);
+      color: var(--sht-ivory);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    .sht-title{
+      margin: 16px 0 10px;
+      font-size: clamp(38px, 4.6vw, 56px);
+      line-height: 1.04;
+      letter-spacing: -0.02em;
+    }
+
+    .sht-sub{
+      color: var(--sht-muted);
+      max-width: 62ch;
+      font-size: 16px;
+      line-height: 1.7;
+      margin: 0 0 22px;
+    }
+
+    .sht-cta{ display:flex; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+
+    .sht-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      border: 1px solid transparent;
+      text-decoration:none;
+      cursor:pointer;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease, opacity .18s ease;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .sht-btn:hover{ transform: translateY(-1px); box-shadow: 0 18px 40px rgba(0,0,0,0.35); }
+    .sht-btn:disabled{ opacity: .45; cursor:not-allowed; transform:none; box-shadow:none; }
+
+    .sht-btn--gold{
+      background: linear-gradient(135deg, var(--sht-gold), var(--sht-gold2));
+      color: #111;
+      border-color: rgba(255,255,255,0.10);
+    }
+    .sht-btn--ghost{
+      background: rgba(255,255,255,0.06);
+      color: #fff;
+      border-color: rgba(255,255,255,0.14);
+    }
+
+    .sht-panel{
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: var(--radius);
+      box-shadow: var(--sht-shadow);
+      padding: 18px;
+      overflow: hidden;
+      position: relative;
+      min-height: 240px;
+    }
+    .sht-panel:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(420px 240px at 30% 20%, rgba(199,160,74,0.30), transparent 55%),
+                  radial-gradient(420px 240px at 80% 60%, rgba(182,137,47,0.22), transparent 60%);
+      opacity: .55;
+      pointer-events:none;
+    }
+    .sht-panel__inner{ position:relative; z-index:1; }
+
+    .brandCard{ display:flex; gap: 14px; align-items:center; }
+    .brandCard img{
+      width: 92px; height: 92px;
+      border-radius: 18px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+      display:block;
+    }
+    .brandCard h3{ margin:0; font-size: 18px; letter-spacing: 0.02em; }
+    .brandCard p{ margin:6px 0 0; color: var(--sht-muted); font-size: 13px; line-height: 1.6; }
+
+    .luxStats{
+      margin-top: 16px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .luxStat{
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(0,0,0,0.22);
+      padding: 12px;
+      text-align:center;
+    }
+    .luxStat b{ display:block; font-size: 16px; color: var(--sht-ivory); }
+    .luxStat span{ display:block; margin-top: 4px; font-size: 12px; color: var(--sht-muted); }
+
+    .note{
+      color: var(--sht-muted);
+      font-size: 12px;
+      line-height: 1.6;
+      margin: 10px 0 0;
+    }
+
+    /* Sections */
+    .sht-section{ padding: 64px 0; }
+    .sht-head{
+      display:flex; justify-content:space-between; align-items:flex-end; gap: 14px;
+      margin-bottom: 18px;
+    }
+    .sht-head h2{ margin:0; font-size: 26px; letter-spacing:-0.01em; }
+    .sht-head p{ margin:0; color: var(--sht-muted); max-width: 72ch; }
+
+    .pillRow{ display:flex; flex-wrap:wrap; gap: 10px; margin-top: 10px; }
+    .pill{
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(199,160,74,0.30);
+      background: rgba(199,160,74,0.10);
+      color: var(--sht-ivory);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* Catalog */
+    .catalog{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .product{
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.34);
+      overflow:hidden;
+      position: relative;
+    }
+
+    .product__img{
+      height: 210px;
+      background: rgba(255,255,255,0.04);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      display:flex; align-items:center; justify-content:center;
+      overflow:hidden;
+    }
+    .product__img img{
+      width:100%; height:100%; object-fit: cover; display:block;
+      transform: scale(1.02);
+    }
+
+    .product__body{ padding: 14px 14px 16px; }
+    .product__meta{ display:flex; justify-content:space-between; gap: 10px; align-items:center; margin-bottom: 8px; }
+    .product__name{ font-weight: 800; letter-spacing: 0.01em; }
+    .product__sku{ color: var(--sht-muted); font-size: 12px; }
+    .product__desc{ color: var(--sht-muted); font-size: 13px; line-height:1.65; margin: 0 0 12px; }
+    .product__row{ display:flex; justify-content:space-between; gap: 10px; align-items:center; margin-top: 10px; }
+
+    .price{ font-weight: 900; color: var(--sht-ivory); letter-spacing: 0.01em; }
+    .stock{ font-size: 12px; color: var(--sht-muted); }
+    .stock b{ color: var(--sht-ivory); }
+
+    .product__actions{ display:flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+    .product__actions .sht-btn{ padding: 10px 12px; font-size: 13px; }
+
+    /* Cart Button + Drawer */
+    .cartBtn{
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 999;
+      border-radius: 999px;
+      padding: 12px 14px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--sht-shadow);
+      color:#fff;
+      font-weight: 900;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      gap: 10px;
+    }
+    .cartCount{
+      background: linear-gradient(135deg, var(--sht-gold), var(--sht-gold2));
+      color:#111;
+      font-weight: 900;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 12px;
+    }
+
+    .drawerOverlay{
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s ease;
+      z-index: 1000;
+    }
+    .drawer{
+      position: fixed;
+      top: 0;
+      right: -420px;
+      width: 420px;
+      max-width: 92vw;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(18,15,9,0.98), rgba(10,10,10,0.98));
+      border-left: 1px solid rgba(255,255,255,0.10);
+      box-shadow: -20px 0 60px rgba(0,0,0,0.55);
+      z-index: 1001;
+      transition: right .22s ease;
+      display:flex;
+      flex-direction: column;
+    }
+    .drawerHeader{
+      padding: 16px 16px 12px;
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+    }
+    .drawerHeader h3{ margin:0; letter-spacing: -0.01em; }
+    .drawerClose{
+      background: transparent; border:none; color:#fff; font-size: 20px; cursor:pointer;
+      width: 38px; height: 38px; border-radius: 12px;
+    }
+    .drawerClose:hover{ background: rgba(255,255,255,0.06); }
+    .drawerBody{
+      padding: 14px 16px;
+      overflow: auto;
+      flex: 1;
+    }
+    .cartItem{
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+      border-radius: 18px;
+      padding: 12px;
+      margin-bottom: 10px;
+    }
+    .cartItemTop{
+      display:flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items:flex-start;
+    }
+    .cartItem b{ display:block; }
+    .cartItem small{ color: var(--sht-muted); }
+
+    .qty{
+      display:flex; align-items:center; gap: 8px;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: rgba(0,0,0,0.20);
+    }
+    .qty button{
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-weight: 900;
+      cursor: pointer;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+    }
+    .qty button:disabled{ opacity:.35; cursor:not-allowed; }
+    .qty span{ min-width: 18px; text-align:center; font-weight: 800; }
+
+    .drawerFooter{
+      border-top: 1px solid rgba(255,255,255,0.10);
+      padding: 14px 16px 16px;
+    }
+    .totRow{
+      display:flex; justify-content:space-between; gap: 10px; align-items:center;
+      margin-bottom: 12px;
+      color: var(--sht-ivory);
+      font-weight: 900;
+    }
+
+    /* Governance */
+    .govGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items:start;
+    }
+    .govCard{
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+      box-shadow: 0 18px 58px rgba(0,0,0,0.34);
+      padding: 18px;
+    }
+    .govCard img{
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.10);
+      display:block;
+    }
+
+    /* Footer */
+    .sht-footer{
+      padding: 40px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      background: rgba(0,0,0,0.28);
+    }
+    .footerRow{
+      display:flex;
+      justify-content:space-between;
+      gap: 14px;
+      align-items:center;
+      flex-wrap: wrap;
+      color: var(--sht-muted);
+    }
+    .social a{
+      color: rgba(255,255,255,0.80);
+      text-decoration:none;
+      display:inline-flex;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      align-items:center;
+      justify-content:center;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+    }
+    .social a:hover{ color:#fff; background: rgba(255,255,255,0.07); }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .sht-hero__grid{ grid-template-columns: 1fr; }
+      .catalog{ grid-template-columns: 1fr; }
+      .govGrid{ grid-template-columns: 1fr; }
+      .luxStats{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER (Group) -->
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="../index.html">
+      <img class="brand__logo" src="../assets/logo.png" alt="Innovaverse Group logo" />
+      <span class="brand__name">Innovaverse Group</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="../index.html#companies">Companies</a>
+      <a href="#categories">Collections</a>
+      <a href="#catalog">Stock</a>
+      <a href="#governance">Governance</a>
+      <a class="btn btn--primary" href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="sht-hero">
+    <div class="container sht-hero__grid">
+      <div>
+        <div class="sht-badge"><i class="fa-solid fa-gem"></i> Shwe Htake Tin</div>
+
+        <h1 class="sht-title">Gold & Jewellery,<br>crafted with quiet authority.</h1>
+
+        <p class="sht-sub">
+          A premium gold and jewellery house under Innovaverse Group. We curate timeless pieces,
+          transparent presentation standards, and verified governance — built for trust and elegance.
+        </p>
+
+        <div class="pillRow">
+          <span class="pill">Gold</span>
+          <span class="pill">Jewellery</span>
+          <span class="pill">Diamond</span>
+          <span class="pill">Premium Craft</span>
+        </div>
+
+        <div class="sht-cta">
+          <a class="sht-btn sht-btn--gold" href="#catalog"><i class="fa-solid fa-cart-shopping"></i> Explore Stock</a>
+          <a class="sht-btn sht-btn--ghost" href="#governance"><i class="fa-solid fa-shield-check"></i> View Governance</a>
+        </div>
+
+        <p class="note">
+          *This page supports inquiry / reservation via email. Final pricing may vary with gold rate, size, and workmanship.
+        </p>
+      </div>
+
+      <div class="sht-panel">
+        <div class="sht-panel__inner">
+          <div class="brandCard">
+            <!-- Replace with your logo -->
+            <img src="../assets/companies/shwe-htake-tin.png" alt="Shwe Htake Tin Logo">
+            <div>
+              <h3>SHWE HTAKE TIN</h3>
+              <p>Gold and Jewellery — elegance-first brand system with premium delivery standards.</p>
+            </div>
+          </div>
+
+          <div class="luxStats">
+            <div class="luxStat"><b>Verified</b><span>Governance</span></div>
+            <div class="luxStat"><b>Curated</b><span>Collections</span></div>
+            <div class="luxStat"><b>Premium</b><span>Presentation</span></div>
+          </div>
+
+          <p class="note">
+            Tip: Use PNG for logo/certificates (clean text). Use JPG for product photos (smaller file size).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="sht-section" id="categories">
+    <div class="container">
+      <div class="sht-head">
+        <div>
+          <h2>Collections</h2>
+          <p>Choose a category — Gold, Jewellery, or Diamond — each presented with premium structure and stock control.</p>
+        </div>
+      </div>
+
+      <div class="catalog">
+        <div class="product">
+          <div class="product__img">
+            <img src="../assets/shwe/gold.jpg" alt="Gold Collection (placeholder)">
+          </div>
+          <div class="product__body">
+            <div class="product__meta">
+              <div>
+                <div class="product__name">Gold</div>
+                <div class="product__sku">Category</div>
+              </div>
+            </div>
+            <p class="product__desc">Chains, rings, bangles, and premium daily-wear gold essentials.</p>
+            <a class="sht-btn sht-btn--gold" href="#catalog" style="width:100%;">Browse Gold Items</a>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="product__img">
+            <img src="../assets/shwe/jewellery.jpg" alt="Jewellery Collection (placeholder)">
+          </div>
+          <div class="product__body">
+            <div class="product__meta">
+              <div>
+                <div class="product__name">Jewellery</div>
+                <div class="product__sku">Category</div>
+              </div>
+            </div>
+            <p class="product__desc">Elegant sets, earrings, premium designs for occasions and gifting.</p>
+            <a class="sht-btn sht-btn--gold" href="#catalog" style="width:100%;">Browse Jewellery Items</a>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="product__img">
+            <img src="../assets/shwe/diamond.jpg" alt="Diamond Collection (placeholder)">
+          </div>
+          <div class="product__body">
+            <div class="product__meta">
+              <div>
+                <div class="product__name">Diamond</div>
+                <div class="product__sku">Category</div>
+              </div>
+            </div>
+            <p class="product__desc">Diamond rings and premium stones — designed for timeless value.</p>
+            <a class="sht-btn sht-btn--gold" href="#catalog" style="width:100%;">Browse Diamond Items</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT CATALOG + STOCK + CART -->
+  <section class="sht-section" id="catalog">
+    <div class="container">
+      <div class="sht-head">
+        <div>
+          <h2>Available Stock</h2>
+          <p>Premium display with stock tracking, cart, and email checkout (reservation / inquiry).</p>
+        </div>
+      </div>
+
+      <!-- JS will fill this -->
+      <div class="catalog" id="productGrid"></div>
+
+      <p class="note">
+        If your photos don’t show: check file path + file name (case-sensitive on GitHub Pages).
+      </p>
+    </div>
+  </section>
+
+  <!-- GOVERNANCE / CERTIFICATE -->
+  <section class="sht-section" id="governance">
+    <div class="container">
+      <div class="sht-head">
+        <div>
+          <h2>Governance & Certificates</h2>
+          <p>Verified operations and documentation — designed to build trust and compliance credibility.</p>
+        </div>
+      </div>
+
+      <div class="govGrid">
+        <div class="govCard">
+          <h3 style="margin-top:0;">Company Registration</h3>
+          <p style="color:var(--sht-muted); line-height:1.7;">
+            Shwe Htake Tin operates under Innovaverse governance standards with registered documentation and transparent policies.
+            Replace the image below with your real certificate scan/photo.
+          </p>
+          <img src="../assets/shwe/certificate.jpg" alt="Governance certificate (placeholder)">
+          <p class="note">Best: PNG for certificates (sharp text). Keep under ~400KB.</p>
+        </div>
+
+        <div class="govCard">
+          <h3 style="margin-top:0;">Ethics & Authenticity</h3>
+          <p style="color:var(--sht-muted); line-height:1.7;">
+            Our premium policy emphasizes authenticity, transparent presentation, and professional documentation on each inquiry.
+          </p>
+
+          <div class="pillRow">
+            <span class="pill">Authenticity</span>
+            <span class="pill">Documentation</span>
+            <span class="pill">Compliance</span>
+            <span class="pill">Trust</span>
+          </div>
+
+          <div style="margin-top:16px; padding:14px; border-radius:18px; border:1px solid rgba(255,255,255,0.10); background: rgba(0,0,0,0.20);">
+            <b style="display:block; margin-bottom:6px;">Verification Notes</b>
+            <p style="margin:0; color:var(--sht-muted); line-height:1.7;">
+              Certificates shown here are for trust and governance display. For customer orders,
+              final confirmation will be provided through email with item details and availability.
+            </p>
+          </div>
+
+          <div class="sht-cta" style="margin-top:16px;">
+            <a class="sht-btn sht-btn--gold" href="#catalog"><i class="fa-solid fa-cart-shopping"></i> Browse Stock</a>
+            <a class="sht-btn sht-btn--ghost" href="../index.html#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOATING CART BUTTON -->
+  <button class="cartBtn" id="cartBtn" type="button">
+    <i class="fa-solid fa-bag-shopping"></i>
+    Cart <span class="cartCount" id="cartCount">0</span>
+  </button>
+
+  <!-- CART DRAWER -->
+  <div class="drawerOverlay" id="drawerOverlay"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawerHeader">
+      <h3>Cart</h3>
+      <button class="drawerClose" id="drawerClose" aria-label="Close">✕</button>
+    </div>
+
+    <div class="drawerBody" id="drawerBody"></div>
+
+    <div class="drawerFooter">
+      <div class="totRow">
+        <span>Estimated Total</span>
+        <span id="drawerTotal">0 MMK</span>
+      </div>
+
+      <button class="sht-btn sht-btn--gold" id="checkoutEmail" style="width:100%;">
+        <i class="fa-solid fa-paper-plane"></i> Send Order by Email
+      </button>
+
+      <p class="note">
+        Final price may adjust based on daily gold rate, size, workmanship, and availability.
+      </p>
+    </div>
+  </aside>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="sht-footer">
+  <div class="container">
+    <div class="footerRow">
+      <div>© <span id="year"></span> Innovaverse Ltd. — Shwe Htake Tin</div>
+
+      <!-- Facebook icon only (as you requested earlier for footer icon) -->
+      <div class="social">
+        <!-- Replace href with your real Facebook page -->
+        <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script>
+  /*
+    ✅ WHERE TO CHANGE PRICE / STOCK / PHOTOS
+    Edit PRODUCTS array below only.
+    - price: number only (no commas)
+    - stock: integer
+    - img: correct path (case-sensitive on GitHub Pages)
+  */
+
+  const PRODUCTS = [
+    {
+      id: "SHT-G-001",
+      name: "Classic Gold Chain",
+      category: "Gold",
+      desc: "Premium daily-wear chain with refined finish.",
+      price: 2500000,
+      stock: 8,
+      img: "../assets/shwe/products/gold-chain.jpg"
+    },
+    {
+      id: "SHT-G-002",
+      name: "Gold Ring (Signature)",
+      category: "Gold",
+      desc: "Clean geometry, premium polish — signature ring.",
+      price: 1800000,
+      stock: 6,
+      img: "../assets/shwe/products/gold-ring.jpg"
+    },
+    {
+      id: "SHT-J-001",
+      name: "Elegant Jewellery Set",
+      category: "Jewellery",
+      desc: "Elegant set for gifting and occasions.",
+      price: 4800000,
+      stock: 3,
+      img: "../assets/shwe/products/jewellery-set.jpg"
+    },
+    {
+      id: "SHT-J-002",
+      name: "Premium Earrings",
+      category: "Jewellery",
+      desc: "Elegant earrings with premium finishing.",
+      price: 1100000,
+      stock: 10,
+      img: "../assets/shwe/products/earrings.jpg"
+    },
+    {
+      id: "SHT-D-001",
+      name: "Diamond Ring (Premium)",
+      category: "Diamond",
+      desc: "Timeless diamond ring — premium statement piece.",
+      price: 12000000,
+      stock: 2,
+      img: "../assets/shwe/products/diamond-ring.jpg"
+    }
+  ];
+
+  const CART_KEY = "sht_cart";
+  const cart = JSON.parse(localStorage.getItem(CART_KEY) || "{}");
+
+  const productGrid = document.getElementById("productGrid");
+  const cartCountEl = document.getElementById("cartCount");
+  const drawer = document.getElementById("drawer");
+  const drawerOverlay = document.getElementById("drawerOverlay");
+  const drawerBody = document.getElementById("drawerBody");
+  const drawerTotal = document.getElementById("drawerTotal");
+
+  function mmk(n){
+    return (typeof n === "number")
+      ? n.toLocaleString("en-US") + " MMK"
+      : String(n);
+  }
+
+  function countItems(){
+    return Object.values(cart).reduce((a,b)=>a+b,0);
+  }
+
+  function totalMMK(){
+    let t = 0;
+    for(const [id, qty] of Object.entries(cart)){
+      const p = PRODUCTS.find(x=>x.id===id);
+      if(p && typeof p.price === "number") t += p.price * qty;
+    }
+    return t;
+  }
+
+  function saveCart(){
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    cartCountEl.textContent = countItems();
+  }
+
+  function renderProducts(){
+    if(!productGrid) return;
+    productGrid.innerHTML = "";
+
+    PRODUCTS.forEach(p=>{
+      const inCart = cart[p.id] || 0;
+      const maxed = inCart >= p.stock;
+
+      productGrid.insertAdjacentHTML("beforeend", `
+        <article class="product">
+          <div class="product__img">
+            <img src="${p.img}" alt="${p.name}">
+          </div>
+
+          <div class="product__body">
+            <div class="product__meta">
+              <div>
+                <div class="product__name">${p.name}</div>
+                <div class="product__sku">${p.category} • ${p.id}</div>
+              </div>
+            </div>
+
+            <p class="product__desc">${p.desc}</p>
+
+            <div class="product__row">
+              <div class="price">${mmk(p.price)}</div>
+              <div class="stock">Stock: <b>${p.stock}</b></div>
+            </div>
+
+            <div class="product__actions">
+              <button class="sht-btn sht-btn--gold" data-add="${p.id}" ${maxed ? "disabled" : ""}>
+                <i class="fa-solid fa-plus"></i> Add to Cart
+              </button>
+              <button class="sht-btn sht-btn--ghost" data-remove="${p.id}" ${inCart ? "" : "disabled"}>
+                <i class="fa-solid fa-minus"></i> Remove
+              </button>
+            </div>
+          </div>
+        </article>
+      `);
+    });
+
+    productGrid.querySelectorAll("[data-add]").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        const id = btn.getAttribute("data-add");
+        const p = PRODUCTS.find(x=>x.id===id);
+        if(!p) return;
+        cart[id] = Math.min((cart[id]||0) + 1, p.stock);
+        saveCart(); renderProducts(); renderDrawer();
+      });
+    });
+
+    productGrid.querySelectorAll("[data-remove]").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        const id = btn.getAttribute("data-remove");
+        cart[id] = (cart[id]||0) - 1;
+        if(cart[id] <= 0) delete cart[id];
+        saveCart(); renderProducts(); renderDrawer();
+      });
+    });
+  }
+
+  function renderDrawer(){
+    if(!drawerBody) return;
+    drawerBody.innerHTML = "";
+
+    const items = Object.entries(cart);
+    if(items.length === 0){
+      drawerBody.innerHTML = `<p style="color:var(--sht-muted);">Your cart is empty.</p>`;
+    } else {
+      items.forEach(([id, qty])=>{
+        const p = PRODUCTS.find(x=>x.id===id);
+        if(!p) return;
+
+        drawerBody.insertAdjacentHTML("beforeend", `
+          <div class="cartItem">
+            <div class="cartItemTop">
+              <div>
+                <b>${p.name}</b>
+                <small>${p.id} • ${p.category}</small><br>
+                <small>${mmk(p.price)} × ${qty} = <b style="color:var(--sht-ivory);">${mmk(p.price * qty)}</b></small>
+              </div>
+              <div class="qty" style="margin-left:auto;">
+                <button data-dec="${id}">−</button>
+                <span>${qty}</span>
+                <button data-inc="${id}" ${qty>=p.stock ? "disabled" : ""}>+</button>
+              </div>
+            </div>
+          </div>
+        `);
+      });
+    }
+
+    drawerTotal.textContent = mmk(totalMMK());
+
+    drawerBody.querySelectorAll("[data-dec]").forEach(b=>{
+      b.addEventListener("click", ()=>{
+        const id = b.getAttribute("data-dec");
+        cart[id] = (cart[id]||0) - 1;
+        if(cart[id] <= 0) delete cart[id];
+        saveCart(); renderProducts(); renderDrawer();
+      });
+    });
+
+    drawerBody.querySelectorAll("[data-inc]").forEach(b=>{
+      b.addEventListener("click", ()=>{
+        const id = b.getAttribute("data-inc");
+        const p = PRODUCTS.find(x=>x.id===id);
+        if(!p) return;
+        cart[id] = Math.min((cart[id]||0) + 1, p.stock);
+        saveCart(); renderProducts(); renderDrawer();
+      });
+    });
+  }
+
+  function openDrawer(){
+    drawer.style.right = "0";
+    drawerOverlay.style.opacity = "1";
+    drawerOverlay.style.pointerEvents = "auto";
+    drawer.setAttribute("aria-hidden","false");
+    renderDrawer();
+  }
+
+  function closeDrawer(){
+    drawer.style.right = "-420px";
+    drawerOverlay.style.opacity = "0";
+    drawerOverlay.style.pointerEvents = "none";
+    drawer.setAttribute("aria-hidden","true");
+  }
+
+  document.getElementById("cartBtn")?.addEventListener("click", openDrawer);
+  document.getElementById("drawerClose")?.addEventListener("click", closeDrawer);
+  drawerOverlay?.addEventListener("click", closeDrawer);
+
+  document.getElementById("checkoutEmail")?.addEventListener("click", ()=>{
+    const to = "innovaversegroup@gmail.com"; // ✅ change if needed
+    const subject = "Shwe Htake Tin — Order Request";
+    const lines = [];
+
+    lines.push("Order Request:");
+    lines.push("");
+
+    for(const [id, qty] of Object.entries(cart)){
+      const p = PRODUCTS.find(x=>x.id===id);
+      if(!p) continue;
+      lines.push(`- ${p.name} (${id}) x${qty} | Unit: ${mmk(p.price)} | Subtotal: ${mmk(p.price * qty)}`);
+    }
+
+    lines.push("");
+    lines.push(`Estimated Total: ${mmk(totalMMK())}`);
+    lines.push("");
+    lines.push("Customer Name:");
+    lines.push("Phone:");
+    lines.push("Delivery / Pickup:");
+    lines.push("Notes:");
+
+    const url = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+    window.location.href = url;
+  });
+
+  // Init
+  saveCart();
+  renderProducts();
+</script>
+
+</body>
+</html>
