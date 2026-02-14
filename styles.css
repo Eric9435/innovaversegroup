@@ -2104,7 +2104,7 @@ input:focus, textarea:focus{
 }
 
 .heroBrand img{
-  height: 220px;            /* ✅ luxury size */
+  height: 300px;            /* ✅ luxury size */
   width: auto;
   object-fit: contain;
   display: block;
